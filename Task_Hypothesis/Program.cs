@@ -34,14 +34,16 @@ void Solution(int[] array)
     {
         if (array[i] != 0)
         {
-            for (int j = array.Length / 2; j < array.Length; j++)
+            for (int j = array.Length - 1; j >= array.Length / 2; j--)
             {
+
                 if (array[j] != 0)
                 {
                     if (i + j == array.Length)
                     {
                         Console.WriteLine($"{i} {j}");
                         i = array.Length; // выход из циклов
+                        j = 0;
                     }
                 }
             }
